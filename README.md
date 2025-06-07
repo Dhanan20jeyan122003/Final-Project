@@ -16,7 +16,7 @@ The large model files and Python virtual environment packages **are not included
 
 You can download them from this Google Drive link:
 
-🔗 [Download Models & Packages from Google Drive](https://drive.google.com/drive/folders/1ZOh8-mCqhWy9yuzh5y091McWPX5Pqu_Z?usp=drive_link)
+🔗 [Download Models & Packages from Google Drive](https://drive.google.com/drive/folders/1yikz8xOE52OobvCUsU3Om7DC9Tf57fye?usp=drive_link)
 
 
 ---
