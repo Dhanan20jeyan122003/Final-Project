@@ -1,4 +1,4 @@
-﻿# heart-disease-prediction
+﻿# heart-disease-prediction-Final-Year-Project
 # 🫀 Final Heart Disease Prediction Project
 
 This repository contains the frontend and backend code for a multimodal heart disease prediction system using:
@@ -18,15 +18,9 @@ You can download them from this Google Drive link:
 
 🔗 [Download Models & Packages from Google Drive](https://drive.google.com/drive/folders/1ZOh8-mCqhWy9yuzh5y091McWPX5Pqu_Z?usp=drive_link)
 
-> Make sure to replace the placeholder link above with your actual Google Drive shareable URL.
 
 ---
 
-## 📂 Folder Structure
-
-
-
----
 
 ## ⚙️ Setup Instructions
 
@@ -39,7 +33,7 @@ You can download them from this Google Drive link:
 
 2. Create and activate a virtual environment (optional):
     ```bash
-    python -m venv venv
+    python -m myenv
     venv\Scripts\activate  # On Windows
     ```
 
