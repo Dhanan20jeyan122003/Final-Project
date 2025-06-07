@@ -1,0 +1,15 @@
+{
+    "age": 65,
+    "sex": "Male",
+    "chestPainType": "Typical Angina",
+    "restingBP": 120,
+    "cholesterol": 230,
+    "fbs": "True",
+    "restECG": "Normal",
+    "maxHR": 150,
+    "exerciseAngina": "Yes",
+    "stDepression": 2.3,
+    "stSlope": "Flat",
+    "majorVessels": 0,
+    "thalassemia": "Normal"
+  }

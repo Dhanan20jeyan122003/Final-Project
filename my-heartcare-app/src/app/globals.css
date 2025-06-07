@@ -1,0 +1,291 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
+
+/* Root variables for theme support */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #FF3B3B; /* Updated to match navbar red */
+  --primary-hover: #e62e2e; /* Slightly darker red for hover */
+  --secondary-color: #2c3e50;
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --navbar-height: 60px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    --secondary-color: #34495e;
+  }
+}
+
+/* Responsive base element styling */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-top: var(--navbar-height); /* Account for fixed navbar */
+}
+
+/* Responsive typography */
+h1, .h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 1.5rem; }
+h2, .h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1.25rem; }
+h3, .h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-bottom: 1rem; }
+h4, .h4 { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 600; margin-bottom: 0.75rem; }
+p { font-size: clamp(1rem, 1.2vw, 1.1rem); margin-bottom: 1rem; }
+
+/* Styles for the navigation */
+#mainNav {
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0.5rem 0;
+  z-index: 1030;
+}
+
+#mainNav.navbar-scrolled {
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  padding: 0.3rem 0;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: white !important;
+  text-transform: uppercase;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  opacity: 0.85;
+}
+
+#mainNav .navbar-toggler {
+  border-color: rgba(255,255,255,0.5);
+}
+
+#mainNav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Masthead styling */
+.masthead {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(44, 62, 80, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%), url("/img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: clamp(5rem, 15vh, 10rem);
+  padding-bottom: clamp(3rem, 10vh, calc(10rem - 72px));
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.masthead .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+.masthead h1 {
+  margin-bottom: clamp(1rem, 3vh, 2rem);
+}
+
+.masthead p {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  max-width: 700px;
+  margin: 0 auto clamp(1rem, 3vh, 2rem);
+}
+
+/* Heart.io brand colors */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Section formatting */
+section {
+  padding: 5rem 0;
+}
+
+section h2 {
+  margin-bottom: 3rem;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 1rem 2rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-light {
+  color: var(--secondary-color);
+}
+
+.btn-xl {
+  padding: 1rem 2.5rem;
+  font-size: 0.9rem;
+}
+
+/* HR element styling */
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: var(--primary-color);
+  margin: 1.5rem auto;
+}
+
+hr.light {
+  border-color: white;
+}
+
+hr.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: var(--primary-color);
+}
+
+/* Heart.io specific components */
+.upload-drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.upload-drop-zone:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(255, 59, 59, 0.05);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+  #mainNav .navbar-collapse {
+    background-color: rgba(255, 59, 59, 0.95);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  #mainNav .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  #mainNav .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  h1, .h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* For About section specifically */
+#about {
+  position: relative;
+  z-index: 10;
+  min-height: fit-content;
+  height: auto !important;
+  overflow: visible;
+  margin-top: 64px; /* Adjust based on your navbar height */
+  display: block;
+}

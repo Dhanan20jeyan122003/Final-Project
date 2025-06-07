@@ -1,0 +1,39 @@
+# === Python backend ===
+backend/__pycache__/
+backend/*.py[cod]
+backend/.env
+backend/*.log
+backend/myenv/
+backend/heartenv/
+backend/models/*.pth
+backend/models/*.keras
+backend/models/*.joblib
+backend/models/*.pkl
+
+# === Node.js frontend ===
+my-heartcare-app/node_modules/
+my-heartcare-app/.next/
+my-heartcare-app/.env.local
+my-heartcare-app/.env*
+my-heartcare-app/coverage/
+my-heartcare-app/.turbo/
+my-heartcare-app/.vercel/
+my-heartcare-app/build/
+my-heartcare-app/dist/
+my-heartcare-app/*.log
+
+# === Common ignores ===
+*.DS_Store
+*.Thumbs.db
+*.zip
+*.tar.gz
+*.jpg
+*.jpeg
+*.png
+*.exe
+*.dll
+*.bin
+*.pyd
+*.lib
+*.pyc
+*.tsbuildinfo
