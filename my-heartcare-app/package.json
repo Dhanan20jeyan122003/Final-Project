@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "scripts": {
+  "vercel-build": "npm run prepare && next build"
+},
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "html2canvas": "^1.4.1",
