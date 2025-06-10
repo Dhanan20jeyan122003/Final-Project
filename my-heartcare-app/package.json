@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "scripts": {
-  "prepare": "npm run build",
-  "build": "next build"
-  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "html2canvas": "^1.4.1",
